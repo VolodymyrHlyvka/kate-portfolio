@@ -1,31 +1,39 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Box, Camera, Layers3, Mail, Sparkles, Wand2 } from 'lucide-react';
+import img1 from './assets/1.jpg';
+import img2 from './assets/2.jpg';
+import img3 from './assets/3.jpg';
+import img4 from './assets/4.jpg';
 
 const portfolio = [
   {
-    title: 'Private Residence',
+    title: 'Green Kitchen',
     type: 'Interior Visualization',
-    description: 'Теплий мінімалізм, натуральні матеріали та мʼяке вечірнє світло.',
-    gradient: 'from-[#e8ded2] via-[#f8f4ee] to-[#cfc3b4]',
+    description: 'A bold mix of deep green cabinetry, brass hardware, and a marble island set against herringbone parquet flooring.',
+    image: img1,
+    link: 'https://www.behance.net/gallery/249353699/Green-Wood-Kitchen-Design',
   },
   {
-    title: 'Modern Apartment',
-    type: '3D Interior',
-    description: 'Світлий простір із чистою геометрією, деталізованими фактурами та акцентами.',
-    gradient: 'from-[#f1ede7] via-white to-[#d8d0c6]',
+    title: 'Night Loft Bedroom',
+    type: 'Interior Visualization',
+    description: 'A dramatic bedroom with red LED accents, floor-to-ceiling windows, and a moody city skyline — cinematic atmosphere at its finest.',
+    image: img2,
+    link: 'https://www.behance.net/gallery/248921931/Cinematic-bedroom',
   },
   {
-    title: 'Product Scene',
-    type: 'Commercial Render',
-    description: 'Візуалізація продукту для презентацій, сайту та рекламних матеріалів.',
-    gradient: 'from-[#ddd2c5] via-[#faf7f1] to-[#eee7de]',
+    title: 'Living & Dining Space',
+    type: 'Interior Visualization',
+    description: 'Neutral palette, a round green dining table, fluted wall panels, and abstract art — quiet sophistication in a modern living space.',
+    image: img3,
+    link: null,
   },
   {
-    title: 'Architectural Concept',
-    type: 'Exterior Visualization',
-    description: 'Лаконічна архітектура, реалістичне освітлення та атмосферна подача.',
-    gradient: 'from-[#efe6db] via-[#fffaf3] to-[#cfc8bc]',
+    title: 'Scandinavian Bedroom',
+    type: 'Interior Visualization',
+    description: 'Minimalism in warm wood tones, a micro-cement accent wall, and soft natural light — clean, breathing Scandinavian aesthetics.',
+    image: img4,
+    link: null,
   },
 ];
 
@@ -33,17 +41,17 @@ const services = [
   {
     icon: Box,
     title: '3D Interior Visualization',
-    text: 'Фотореалістичні інтерʼєрні рендери для дизайнерів, архітекторів і приватних клієнтів.',
+    text: 'Photorealistic interior renders for designers, architects, and private clients.',
   },
   {
     icon: Layers3,
-    title: 'Exterior & Architecture',
-    text: 'Візуалізація фасадів, будинків, комерційних просторів і архітектурних концепцій.',
+    title: 'Space Planning & Layout',
+    text: 'Visualization of floor plans and spatial layouts to communicate design intent before construction begins.',
   },
   {
     icon: Camera,
     title: 'Product Rendering',
-    text: 'Сцени для брендів, каталогів, сайтів, презентацій і соціальних мереж.',
+    text: 'Scenes for brands, catalogs, websites, presentations, and social media.',
   },
 ];
 
@@ -66,7 +74,7 @@ export default function App() {
             <a href="#services" className="transition hover:text-[#171412]">Services</a>
             <a href="#contact" className="transition hover:text-[#171412]">Contact</a>
           </div>
-          <a href="mailto:hello@hlyvkakate.com" className="rounded-full bg-[#171412] px-5 py-2 text-sm font-medium text-white transition hover:bg-[#3a332d]">
+          <a href="mailto:kate.3dvisualizer@gmail.com" className="rounded-full bg-[#171412] px-5 py-2 text-sm font-medium text-white transition hover:bg-[#3a332d]">
             Letʼs talk
           </a>
         </nav>
@@ -74,13 +82,13 @@ export default function App() {
         <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-14 py-20 md:grid-cols-[1.05fr_0.95fr] md:py-28">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#171412]/10 bg-white/65 px-4 py-2 text-sm text-[#171412]/65 shadow-sm backdrop-blur-xl">
-              <Sparkles className="h-4 w-4" /> 3D Visualizer / Interior / Architecture
+              <Sparkles className="h-4 w-4" /> 3D Visualizer / Interior Design
             </div>
             <h1 className="max-w-4xl text-6xl font-semibold leading-[0.95] tracking-[-0.06em] md:text-8xl">
               Visual stories for spaces before they exist.
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-[#171412]/62 md:text-xl">
-              Hlyvka Kate створює естетичні 3D-візуалізації інтерʼєрів, архітектури та продуктів — з увагою до світла, матеріалів, композиції та атмосфери.
+              Hlyvka Kate creates aesthetic 3D visualizations of interiors — with a deep focus on light, materials, composition, and the feeling of a space.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a href="#work" className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#171412] px-7 py-4 font-medium text-white shadow-lg shadow-[#171412]/10 transition hover:bg-[#3a332d]">
@@ -118,7 +126,6 @@ export default function App() {
               <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#171412]/40">Selected work</p>
               <h2 className="max-w-2xl text-4xl font-semibold tracking-[-0.05em] md:text-6xl">Portfolio scenes crafted with precision.</h2>
             </div>
-            <p className="max-w-md text-[#171412]/55">Замініть ці блоки на реальні рендери — структура вже готова для галереї, кейсів або Behance-посилань.</p>
           </div>
 
           <div className="grid gap-5 md:grid-cols-2">
@@ -131,11 +138,23 @@ export default function App() {
                 transition={{ duration: 0.5, delay: index * 0.08 }}
                 className="group overflow-hidden rounded-[2rem] border border-[#171412]/10 bg-white/55 p-3 shadow-sm backdrop-blur-xl"
               >
-                <div className={`relative aspect-[1.25/1] rounded-[1.5rem] bg-gradient-to-br ${item.gradient}`}>
-                  <div className="absolute inset-0 bg-[linear-gradient(135deg,transparent,rgba(70,52,34,0.18))]" />
-                  <div className="absolute right-5 top-5 flex h-12 w-12 items-center justify-center rounded-full bg-white/60 text-[#171412] shadow-sm backdrop-blur-lg transition group-hover:scale-105">
-                    <ArrowUpRight className="h-5 w-5" />
-                  </div>
+                <div className="relative aspect-[1.25/1] overflow-hidden rounded-[1.5rem]">
+                  <img src={item.image} alt={item.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-[linear-gradient(135deg,transparent,rgba(20,14,8,0.22))]" />
+                  {item.link ? (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="absolute right-5 top-5 flex h-12 w-12 items-center justify-center rounded-full bg-white/60 text-[#171412] shadow-sm backdrop-blur-lg transition group-hover:scale-105 hover:bg-white"
+                    >
+                      <ArrowUpRight className="h-5 w-5" />
+                    </a>
+                  ) : (
+                    <div className="absolute right-5 top-5 flex h-12 w-12 items-center justify-center rounded-full bg-white/25 text-[#171412]/30 shadow-sm backdrop-blur-lg cursor-not-allowed">
+                      <ArrowUpRight className="h-5 w-5" />
+                    </div>
+                  )}
                 </div>
                 <div className="p-5">
                   <p className="text-sm uppercase tracking-[0.25em] text-[#171412]/38">{item.type}</p>
@@ -155,7 +174,7 @@ export default function App() {
               <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#171412]/40">Services</p>
               <h2 className="text-4xl font-semibold tracking-[-0.05em] md:text-5xl">From concept to final render.</h2>
             </div>
-            <p className="text-lg leading-8 text-[#171412]/58">Кожен проєкт будується навколо цілі: продати ідею, презентувати простір або створити сильну візуальну історію.</p>
+            <p className="text-lg leading-8 text-[#171412]/58">Every project is built around a goal: sell the idea, present the space, or create a powerful visual story.</p>
           </div>
 
           <div className="grid gap-4 md:grid-cols-3">
@@ -202,16 +221,16 @@ export default function App() {
               <h2 className="max-w-3xl text-5xl font-semibold leading-none tracking-[-0.06em] md:text-7xl">Letʼs create visuals that sell the idea.</h2>
             </div>
             <div className="flex flex-col justify-end">
-              <p className="mb-8 text-lg leading-8 text-white/62">Напишіть, якщо потрібна 3D-візуалізація інтерʼєру, екстерʼєру або продукту. Для старту достатньо плану, референсів і короткого опису задачі.</p>
-              <a href="mailto:hello@hlyvkakate.com" className="group inline-flex items-center justify-center gap-3 rounded-full bg-white px-7 py-4 font-medium text-[#171412] transition hover:bg-[#f1e7d8]">
-                <Mail className="h-5 w-5" /> hello@hlyvkakate.com <ArrowUpRight className="h-5 w-5 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <p className="mb-8 text-lg leading-8 text-white/62">Reach out if you need a 3D visualization of your interior. A floor plan, references, and a brief description are enough to get started.</p>
+              <a href="mailto:kate.3dvisualizer@gmail.com" className="group inline-flex items-center justify-center gap-3 rounded-full bg-white px-7 py-4 font-medium text-[#171412] transition hover:bg-[#f1e7d8]">
+                <Mail className="h-5 w-5" /> kate.3dvisualizer@gmail.com <ArrowUpRight className="h-5 w-5 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
             </div>
           </div>
         </div>
         <footer className="mx-auto flex max-w-7xl flex-col justify-between gap-3 px-2 py-8 text-sm text-[#171412]/40 md:flex-row">
           <span>© 2026 Hlyvka Kate. 3D Visualization Portfolio.</span>
-          <span>Interior · Architecture · Product Render</span>
+          <span>Interior · 3D Visualization · Lighting & Materials</span>
         </footer>
       </section>
     </main>
