@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Box, Camera, Layers3, Mail, Sparkles, Wand2 } from 'lucide-react';
+import { ArrowUpRight, Box, Camera, Instagram, Layers3, Sparkles, Wand2 } from 'lucide-react';
 import img1 from './assets/1.jpg';
 import img2 from './assets/2.jpg';
 import img3 from './assets/3.jpg';
 import img4 from './assets/4.jpg';
+import imgMain from './assets/main.jpg';
 
 const portfolio = [
   {
@@ -68,13 +69,13 @@ export default function App() {
         </div>
 
         <nav className="relative z-10 mx-auto flex max-w-7xl items-center justify-between rounded-full border border-[#171412]/10 bg-white/65 px-5 py-4 shadow-sm backdrop-blur-xl">
-          <div className="text-sm font-semibold uppercase tracking-[0.32em] text-[#171412]/80">Hlyvka Kate</div>
+          <div className="text-sm font-semibold uppercase tracking-[0.32em] text-[#171412]/80">Kate 3D Visualization</div>
           <div className="hidden items-center gap-8 text-sm text-[#171412]/55 md:flex">
             <a href="#work" className="transition hover:text-[#171412]">Work</a>
             <a href="#services" className="transition hover:text-[#171412]">Services</a>
             <a href="#contact" className="transition hover:text-[#171412]">Contact</a>
           </div>
-          <a href="mailto:kate.3dvisualizer@gmail.com" className="rounded-full bg-[#171412] px-5 py-2 text-sm font-medium text-white transition hover:bg-[#3a332d]">
+          <a href="http://instagram.com/katya__3dvisualizer" target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#171412] px-5 py-2 text-sm font-medium text-white transition hover:bg-[#3a332d]">
             Letʼs talk
           </a>
         </nav>
@@ -101,18 +102,19 @@ export default function App() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9, delay: 0.1 }} className="relative">
-            <div className="aspect-[4/5] overflow-hidden rounded-[2rem] border border-[#171412]/10 bg-gradient-to-br from-[#f8f4ee] via-white to-[#d4c8b9] p-4 shadow-2xl shadow-[#6f6253]/20">
-              <div className="relative h-full overflow-hidden rounded-[1.5rem] bg-[#efe6db] p-5">
-                <div className="absolute inset-5 rounded-[1.25rem] bg-[radial-gradient(circle_at_30%_25%,rgba(255,255,255,0.95),transparent_18%),linear-gradient(135deg,rgba(255,255,255,0.75),rgba(120,95,68,0.08))]" />
-                <div className="absolute bottom-10 left-8 right-8 rounded-3xl border border-white/70 bg-white/55 p-5 shadow-xl shadow-[#6f6253]/10 backdrop-blur-xl">
-                  <div className="mb-16 h-1.5 w-20 rounded-full bg-[#171412]/65" />
-                  <p className="text-3xl font-semibold tracking-[-0.04em] text-[#171412]">Light, material, emotion.</p>
-                  <p className="mt-3 text-sm leading-6 text-[#171412]/58">Photorealistic renders with a calm editorial aesthetic.</p>
+            <div className="aspect-[4/5] overflow-hidden rounded-[2rem] border border-[#171412]/10 p-4 shadow-2xl shadow-[#6f6253]/20">
+              <div className="relative h-full overflow-hidden rounded-[1.5rem]">
+                <img src={imgMain} alt="Interior visualization" className="h-full w-full object-cover" />
+                <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(23,20,18,0.55)_0%,transparent_50%)]" />
+                <div className="absolute bottom-12 left-7 right-7 rounded-3xl border border-white/20 bg-white/20 p-5 shadow-xl backdrop-blur-xl">
+                  <div className="mb-16 h-1.5 w-20 rounded-full bg-white/70" />
+                  <p className="text-3xl font-semibold tracking-[-0.04em] text-white">Light, material, emotion.</p>
+                  <p className="mt-3 text-sm leading-6 text-white/70">Photorealistic renders with a calm editorial aesthetic.</p>
                 </div>
               </div>
             </div>
             <div className="absolute -bottom-6 -left-6 rounded-3xl border border-[#171412]/10 bg-white/80 p-5 shadow-xl shadow-[#6f6253]/10 backdrop-blur-xl">
-              <div className="text-4xl font-semibold">48+</div>
+              <div className="text-4xl font-semibold">12+</div>
               <div className="mt-1 text-sm text-[#171412]/55">completed renders</div>
             </div>
           </motion.div>
@@ -222,8 +224,8 @@ export default function App() {
             </div>
             <div className="flex flex-col justify-end">
               <p className="mb-8 text-lg leading-8 text-white/62">Reach out if you need a 3D visualization of your interior. A floor plan, references, and a brief description are enough to get started.</p>
-              <a href="mailto:kate.3dvisualizer@gmail.com" className="group inline-flex items-center justify-center gap-3 rounded-full bg-white px-7 py-4 font-medium text-[#171412] transition hover:bg-[#f1e7d8]">
-                <Mail className="h-5 w-5" /> kate.3dvisualizer@gmail.com <ArrowUpRight className="h-5 w-5 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <a href="http://instagram.com/katya__3dvisualizer" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center justify-center gap-3 rounded-full bg-white px-7 py-4 font-medium text-[#171412] transition hover:bg-[#f1e7d8]">
+                <Instagram className="h-5 w-5" /> @katya__3dvisualizer <ArrowUpRight className="h-5 w-5 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
             </div>
           </div>
